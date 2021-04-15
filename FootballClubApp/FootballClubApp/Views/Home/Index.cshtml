@@ -1,31 +1,100 @@
-﻿@{
+﻿@model List<FootballClubApp.Models.ClubTeam>
+@{
     ViewBag.Title = "Home Page";
+    Layout = null;
 }
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/realsite.css" rel="stylesheet" />
+    <link href="~/Content/PFGeneral.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="main">
+            <div class="container">
+                <div class="content">
+                    <div class="col-sm-12 col-sm-offset-0">
+                        <h2 class="page-header center">English Premier League Table 2020-21</h2>
+                        <div class="box">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col"></th>
+                                        <th scope="col">Club Name</th>
+                                        <th scope="col">GP</th>
+                                        <th scope="col">W</th>
+                                        <th scope="col">L</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">F</th>
+                                        <th scope="col">A</th>
+                                        <th scope="col">Points</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model != null && Model.Count > 0)
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <th scope="row">@item.ID</th>
+                                                <td><img src="~/Images/@(item.ID+ ".PNG")" /></td>
+                                                <td><a href="/Home/TeamDetails/@item.ID">@item.Name</a></td>
+                                                <td>@item.GamePlayed</td>
+                                                <td>@item.Win</td>
+                                                <td>@item.Draw</td>
+                                                <td>@item.Lose</td>
+                                                <td>@item.Draw</td>
+                                                <td>@item.GoalsScore</td>
+                                                <td>@item.GoalsAgainst</td>
+                                                <td>@item.CurrentPoints</td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div><!-- /.box -->
+                    </div><!-- /.col-* -->
+                </div><!-- /.content -->
+            </div><!-- /.container -->
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+        </div><!-- /.main -->
+
+
+        <div id="footer" class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top-inner">
+                        <nav>
+                            <ul class="nav nav-pills">
+                                @*<li><a asp-controller="User" asp-action="Index">Register</a></li>
+                                    <li><a asp-controller="User" asp-action="Login">login</a></li>*@
+                            </ul>
+                        </nav>
+                    </div><!-- /.footer-top-inner -->
+                </div><!-- /.container -->
+            </div><!-- /.footer-top -->
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-inner">
+                        <div class="footer-bottom-left">
+                        </div><!-- /.footer-bottom-left -->
+
+                        <div class="footer-bottom-right">
+                        </div><!-- /.footer-bottom-right -->
+                    </div><!-- /.footer-bottom-inner -->
+                </div><!-- /.container -->
+            </div><!-- /.footer-bottom -->
+        </div><!-- /.footer -->
+
+    </div><!-- /.page-wrapper-->
+
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
