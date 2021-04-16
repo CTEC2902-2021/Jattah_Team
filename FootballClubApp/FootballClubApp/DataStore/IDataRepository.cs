@@ -9,5 +9,7 @@ namespace FootballClubApp.DataStore
     public interface IDataRepository
     {
         List<ClubTeam> GetAllTeams();
+        List<TeamPlayer> GetTeamPlayers(int TeamId);
+        string GetTeamName(int TeamId);
     }
 }

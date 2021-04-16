@@ -1,6 +1,6 @@
-﻿@model List<FootballClubApp.Models.ClubTeam>
+﻿@model List<FootballClubApp.Models.TeamPlayer>
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Team Details";
     Layout = null;
 }
 <html>
@@ -13,38 +13,24 @@
 </head>
 <body>
     <div class="page-wrapper">
-    
+        <h3>Click <a href="/Home/Index">here</a> to go back to Main Page</h3>
         <div class="main">
             <div class="container">
                 <div class="content">
                     <div class="col-sm-12 col-sm-offset-0">
-                        <h2 class="page-header center">English Premier League Table 2020-21</h2>
+                        <h2 class="page-header center">@Session["TeamName"]</h2>
                         <div class="box">
-                            @if (@Session["Message"] != null)
-                            {
-
-                                if (!@Session["Message"].Equals(""))
-                                {
-                                    <div class="alert alert-success">
-                                        @Session["Message"]
-                                    </div>
-
-                                }
-
-                            }
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col"></th>
-                                        <th scope="col">Club Name</th>
-                                        <th scope="col">GP</th>
-                                        <th scope="col">W</th>
-                                        <th scope="col">L</th>
-                                        <th scope="col">D</th>
-                                        <th scope="col">F</th>
-                                        <th scope="col">A</th>
-                                        <th scope="col">Points</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Goals</th>
+                                        <th scope="col">Assist</th>
+                                        <th scope="col">Played</th>
+                                        <th scope="col">Total Shots</th>
+                                        <th scope="col">Goal Conversion</th>
+                                        <th scope="col">Shot Accuracy</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,15 +40,13 @@
                                         {
                                             <tr>
                                                 <th scope="row">@item.ID</th>
-                                                <td><img height="30" width="30" src="~/Images/@(item.ID+ ".PNG")" /></td>
-                                                <td><a href="/Home/TeamDetails/@item.ID">@item.Name</a></td>
-                                                <td>@item.GamePlayed</td>
-                                                <td>@item.Win</td>
-                                                <td>@item.Lose</td>
-                                                <td>@item.Draw</td>
-                                                <td>@item.GoalsScore</td>
-                                                <td>@item.GoalsAgainst</td>
-                                                <td>@item.CurrentPoints</td>
+                                                <td>@item.Name</td>
+                                                <td>@item.Goals</td>
+                                                <td>@item.Assist</td>
+                                                <td>@item.Played</td>
+                                                <td>@item.TotalShots</td>
+                                                <td>@item.GoalConversion</td>
+                                                <td>@item.ShotAccuracy</td>
                                             </tr>
                                         }
                                     }

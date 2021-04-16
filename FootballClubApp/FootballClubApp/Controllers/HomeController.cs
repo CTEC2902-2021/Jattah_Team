@@ -15,18 +15,20 @@ namespace FootballClubApp.Controllers
             return View(DataStore.GetAllTeams());
         }
 
-        public ActionResult About()
+        public ActionResult TeamDetails(int ID)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            Session["Message"] = null;
+            if (ID <= 10)
+            {
+                Session["TeamName"] = DataStore.GetTeamName(ID);
+                return View(DataStore.GetTeamPlayers(ID));
+            }
+            else
+            {
+                Session["Message"] = "Information Not Available for this team";
+                return RedirectToAction("Index");
+            }
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
