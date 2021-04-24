@@ -8,6 +8,8 @@ namespace FootballClubApp.Models
     public class ClubTeam
     {
         public int ID { get; set; }
+        public int Ranking { get; set; }
+        public int NumberOfFans { get; set; }
         public string Name { get; set; }
         public int GamePlayed { get; set; }
         public int Win { get; set; }

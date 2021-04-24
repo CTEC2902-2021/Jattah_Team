@@ -12,8 +12,35 @@
     <link href="~/Content/PFGeneral.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
+        <div id="top-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="home-account" style="float:right;">
+                  
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="main-header" style="background-color: #1E88E5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="logo">
+
+                            <a href="#"><img height="100" width="100" src="~/Images/logo.png" title="English Premier League" alt="English Premier League"></a>
+                        </div>
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="page-wrapper">
-    
+
         <div class="main">
             <div class="container">
                 <div class="content">
@@ -38,6 +65,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col"></th>
                                         <th scope="col">Club Name</th>
+                                        <th scope="col">Team Ranking</th>
                                         <th scope="col">GP</th>
                                         <th scope="col">W</th>
                                         <th scope="col">L</th>
@@ -45,6 +73,7 @@
                                         <th scope="col">F</th>
                                         <th scope="col">A</th>
                                         <th scope="col">Points</th>
+                                        <th scope="col">Number Of Fans</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,6 +85,7 @@
                                                 <th scope="row">@item.ID</th>
                                                 <td><img height="30" width="30" src="~/Images/@(item.ID+ ".PNG")" /></td>
                                                 <td><a href="/Home/TeamDetails/@item.ID">@item.Name</a></td>
+                                                <td>@item.Ranking</td>
                                                 <td>@item.GamePlayed</td>
                                                 <td>@item.Win</td>
                                                 <td>@item.Lose</td>
@@ -63,6 +93,7 @@
                                                 <td>@item.GoalsScore</td>
                                                 <td>@item.GoalsAgainst</td>
                                                 <td>@item.CurrentPoints</td>
+                                                <td>@item.NumberOfFans</td>
                                             </tr>
                                         }
                                     }

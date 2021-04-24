@@ -12,21 +12,21 @@ namespace FootballClubApp.DataStore
         public List<TeamPlayer> TeamPlayers = new List<TeamPlayer>();
         public DataRepository()
         {
-            ClubTeams.Add(new ClubTeam() { ID = 1, Name = "Manchester City", GamePlayed = 32, Win = 23, Draw = 5, Lose = 4, GoalsScore = 67, GoalsAgainst = 23, CurrentPoints = 74 });
-            ClubTeams.Add(new ClubTeam() { ID = 2, Name = "Manchester United", GamePlayed = 31, Win = 18, Draw = 9, Lose = 9, GoalsScore = 61, GoalsAgainst = 34, CurrentPoints = 63 });
-            ClubTeams.Add(new ClubTeam() { ID = 3, Name = "Leicester City", GamePlayed = 31, Win = 17, Draw = 5, Lose = 8, GoalsScore = 55, GoalsAgainst = 37, CurrentPoints = 56 });
-            ClubTeams.Add(new ClubTeam() { ID = 4, Name = "West Ham United", GamePlayed = 31, Win = 16, Draw = 7, Lose = 7, GoalsScore = 51, GoalsAgainst = 39, CurrentPoints = 55 });
-            ClubTeams.Add(new ClubTeam() { ID = 5, Name = "Chelsea", GamePlayed = 31, Win = 15, Draw = 9, Lose = 9, GoalsScore = 50, GoalsAgainst = 31, CurrentPoints = 54 });
-            ClubTeams.Add(new ClubTeam() { ID = 6, Name = "Liverpool", GamePlayed = 31, Win = 15, Draw = 7, Lose = 10, GoalsScore = 53, GoalsAgainst = 37, CurrentPoints = 52 });
-            ClubTeams.Add(new ClubTeam() { ID = 7, Name = "Tottenham Hotspur", GamePlayed = 31, Win = 14, Draw = 7, Lose = 10, GoalsScore = 52, GoalsAgainst = 35, CurrentPoints = 49 });
-            ClubTeams.Add(new ClubTeam() { ID = 8, Name = "Everton", GamePlayed = 30, Win = 14, Draw = 6, Lose = 4, GoalsScore = 41, GoalsAgainst = 38, CurrentPoints = 48 });
-            ClubTeams.Add(new ClubTeam() { ID = 9, Name = "Arsenal", GamePlayed = 31, Win = 13, Draw = 6, Lose = 12, GoalsScore = 43, GoalsAgainst = 35, CurrentPoints = 45 });
-            ClubTeams.Add(new ClubTeam() { ID = 10, Name = "Leeds United", GamePlayed = 31, Win = 14, Draw = 3, Lose = 14, GoalsScore = 49, GoalsAgainst = 49, CurrentPoints = 45 });
-            ClubTeams.Add(new ClubTeam() { ID = 11, Name = "Aston Villa", GamePlayed = 30, Win = 13, Draw = 5, Lose = 12, GoalsScore = 43, GoalsAgainst = 33, CurrentPoints = 44 });
-            ClubTeams.Add(new ClubTeam() { ID = 12, Name = "Wolverhampton Wanderers", GamePlayed = 31, Win = 10, Draw = 8, Lose = 13, GoalsScore = 31, GoalsAgainst = 41, CurrentPoints = 38 });
-            ClubTeams.Add(new ClubTeam() { ID = 13, Name = "Crystal Palace", GamePlayed = 31, Win = 10, Draw = 8, Lose = 13, GoalsScore = 33, GoalsAgainst = 52, CurrentPoints = 38 });
-            ClubTeams.Add(new ClubTeam() { ID = 14, Name = "Southampton", GamePlayed = 31, Win = 10, Draw = 6, Lose = 15, GoalsScore = 39, GoalsAgainst = 56, CurrentPoints = 36 });
-            ClubTeams.Add(new ClubTeam() { ID = 15, Name = "Brighton & Hove Albion", GamePlayed = 31, Win = 7, Draw = 12, Lose = 12, GoalsScore = 33, GoalsAgainst = 38, CurrentPoints = 33 });
+            ClubTeams.Add(new ClubTeam() { ID = 1, Ranking = 1, NumberOfFans = 323211, Name = "Manchester City", GamePlayed = 32, Win = 23, Draw = 5, Lose = 4, GoalsScore = 67, GoalsAgainst = 23, CurrentPoints = 74 });
+            ClubTeams.Add(new ClubTeam() { ID = 2, Ranking = 2, NumberOfFans = 235451, Name = "Manchester United", GamePlayed = 31, Win = 18, Draw = 9, Lose = 9, GoalsScore = 61, GoalsAgainst = 34, CurrentPoints = 63 });
+            ClubTeams.Add(new ClubTeam() { ID = 3, Ranking = 3, NumberOfFans = 238727, Name = "Leicester City", GamePlayed = 31, Win = 17, Draw = 5, Lose = 8, GoalsScore = 55, GoalsAgainst = 37, CurrentPoints = 56 });
+            ClubTeams.Add(new ClubTeam() { ID = 4, Ranking = 4, NumberOfFans = 235435, Name = "West Ham United", GamePlayed = 31, Win = 16, Draw = 7, Lose = 7, GoalsScore = 51, GoalsAgainst = 39, CurrentPoints = 55 });
+            ClubTeams.Add(new ClubTeam() { ID = 5, Ranking = 5, NumberOfFans = 543534, Name = "Chelsea", GamePlayed = 31, Win = 15, Draw = 9, Lose = 9, GoalsScore = 50, GoalsAgainst = 31, CurrentPoints = 54 });
+            ClubTeams.Add(new ClubTeam() { ID = 6, Ranking = 6, NumberOfFans = 76423, Name = "Liverpool", GamePlayed = 31, Win = 15, Draw = 7, Lose = 10, GoalsScore = 53, GoalsAgainst = 37, CurrentPoints = 52 });
+            ClubTeams.Add(new ClubTeam() { ID = 7, Ranking = 7, NumberOfFans = 23545, Name = "Tottenham Hotspur", GamePlayed = 31, Win = 14, Draw = 7, Lose = 10, GoalsScore = 52, GoalsAgainst = 35, CurrentPoints = 49 });
+            ClubTeams.Add(new ClubTeam() { ID = 8, Ranking = 8, NumberOfFans = 67534, Name = "Everton", GamePlayed = 30, Win = 14, Draw = 6, Lose = 4, GoalsScore = 41, GoalsAgainst = 38, CurrentPoints = 48 });
+            ClubTeams.Add(new ClubTeam() { ID = 9, Ranking = 9, NumberOfFans = 75464, Name = "Arsenal", GamePlayed = 31, Win = 13, Draw = 6, Lose = 12, GoalsScore = 43, GoalsAgainst = 35, CurrentPoints = 45 });
+            ClubTeams.Add(new ClubTeam() { ID = 10, Ranking = 10, NumberOfFans = 42345, Name = "Leeds United", GamePlayed = 31, Win = 14, Draw = 3, Lose = 14, GoalsScore = 49, GoalsAgainst = 49, CurrentPoints = 45 });
+            ClubTeams.Add(new ClubTeam() { ID = 11, Ranking = 11, NumberOfFans = 34323, Name = "Aston Villa", GamePlayed = 30, Win = 13, Draw = 5, Lose = 12, GoalsScore = 43, GoalsAgainst = 33, CurrentPoints = 44 });
+            ClubTeams.Add(new ClubTeam() { ID = 12, Ranking = 12, NumberOfFans = 65653, Name = "Wolverhampton Wanderers", GamePlayed = 31, Win = 10, Draw = 8, Lose = 13, GoalsScore = 31, GoalsAgainst = 41, CurrentPoints = 38 });
+            ClubTeams.Add(new ClubTeam() { ID = 13, Ranking = 13, NumberOfFans = 23455, Name = "Crystal Palace", GamePlayed = 31, Win = 10, Draw = 8, Lose = 13, GoalsScore = 33, GoalsAgainst = 52, CurrentPoints = 38 });
+            ClubTeams.Add(new ClubTeam() { ID = 14, Ranking = 14, NumberOfFans = 97856, Name = "Southampton", GamePlayed = 31, Win = 10, Draw = 6, Lose = 15, GoalsScore = 39, GoalsAgainst = 56, CurrentPoints = 36 });
+            ClubTeams.Add(new ClubTeam() { ID = 15, Ranking = 15, NumberOfFans = 34536, Name = "Brighton & Hove Albion", GamePlayed = 31, Win = 7, Draw = 12, Lose = 12, GoalsScore = 33, GoalsAgainst = 38, CurrentPoints = 33 });
 
             LoanPlayerInformation();
         }
@@ -84,7 +84,7 @@ namespace FootballClubApp.DataStore
             TeamPlayers.Add(new TeamPlayer() { ID = 1, TeamId = 4, Name = "Tomas Soucek", Goals = 43, Assist = 17, Played = 33, TotalShots = 44, GoalConversion = 24, ShotAccuracy = 65 });
             TeamPlayers.Add(new TeamPlayer() { ID = 2, TeamId = 4, Name = "Jarrod Bowen", Goals = 23, Assist = 3, Played = 30, TotalShots = 33, GoalConversion = 41, ShotAccuracy = 44 });
             TeamPlayers.Add(new TeamPlayer() { ID = 3, TeamId = 4, Name = "Jesse Lingard", Goals = 23, Assist = 23, Played = 35, TotalShots = 23, GoalConversion = 32, ShotAccuracy = 22 });
-            TeamPlayers.Add(new TeamPlayer() { ID = 4, TeamId = 4, Name = "Michail Antonio", Goals = 43, Assist =17, Played = 33, TotalShots = 43, GoalConversion = 20, ShotAccuracy = 23 });
+            TeamPlayers.Add(new TeamPlayer() { ID = 4, TeamId = 4, Name = "Michail Antonio", Goals = 43, Assist = 17, Played = 33, TotalShots = 43, GoalConversion = 20, ShotAccuracy = 23 });
             TeamPlayers.Add(new TeamPlayer() { ID = 5, TeamId = 4, Name = "Sébastien Haller", Goals = 28, Assist = 3, Played = 42, TotalShots = 54, GoalConversion = 55, ShotAccuracy = 63 });
             TeamPlayers.Add(new TeamPlayer() { ID = 6, TeamId = 4, Name = "Pablo Fornals", Goals = 4, Assist = 32, Played = 31, TotalShots = 43, GoalConversion = 32, ShotAccuracy = 32 });
             TeamPlayers.Add(new TeamPlayer() { ID = 7, TeamId = 4, Name = "Craig Dawson", Goals = 6, Assist = 0, Played = 27, TotalShots = 54, GoalConversion = 53, ShotAccuracy = 55 });
